@@ -7,17 +7,26 @@ public class NumberSix {
 		     Scanner scan = new Scanner(System.in);
 		     System.out.println("please enter a number");
 		     
-		     int n= scan.nextInt();
-		     
-		     if(n%2==1) {
-		    	 System.out.println("number is  prime");
-		     }else {
-		    	 System.out.println("number is not prime");
+		     int num = scan.nextInt(), i = 2;
+		     boolean flag = false;
+		     while (i <= num / 2) {
+		       // condition for nonprime number
+		       if (num % i == 0) {
+		         flag = true;
+		         break;
+		       }
+
+		       ++i;
 		     }
-		    	
+
+		     if (!flag)
+		       System.out.println(num + " is a prime number.");
+		     else
+		       System.out.println(num + " is not a prime number.");
+		   }
+		 
 		     
 		     
 		     
 		     
 		    }
-}
